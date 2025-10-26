@@ -4,4 +4,5 @@ import '../public/almotek.css';
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
-import '../public/almotek.css';
+import '../styles/almotek.css';
+
