@@ -1,0 +1,19 @@
+name: Reset to Template Commit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Force reset main branch to template commit
+        run: |
+          git checkout main
+          git reset --hard fb2739feee50124b679a3fc7c8c46f8cacda9561
+          git push --force origin main
